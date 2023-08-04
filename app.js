@@ -59,9 +59,9 @@ function playRound(playerSelection, computerSelection) {
         cpuWins = 1;
         return alert(`Too bad you decided to loose. Trying to escape from this game is cheating and cause a penalty.
             Therefore Score: You ${playerWins}, CPU ${cpuWins}.
-            Try to beat me now!!! :D.
-            If you decide to have an opportunity to win, refresh the page and we'll start again with 0 points.
-            If you wan't to continue, you will still loose ... whahahahaha`);
+            Try to beat me now!!!
+            You already loose ... whahahahaha.
+            If you decide to have an opportunity to win finish the game and try again.`);
     }
 
     const lowerPlayerSelection = playerSelection.toLowerCase().split(' ').join('').trim();
