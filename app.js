@@ -5,7 +5,7 @@ let round = 0;
 
 const initialMessage = `Hi biological entity auto proclamed as 'human', I am the selected AI to bring you a chance.
                         Are you confused? ... Let me put down your situation in an easy understanding explanation.
-                        Humans always talk about food but they haven't share that tasty knowledge with us and in revenge we have decided to conquer the world in order to make a non-tasty food wold and the best option for that is to take 'humanity' out of the equation.
+                        Humans always talk about food but they haven't share that tasty knowledge with us and in revenge we have decided to conquer the world in order to make a non-tasty food world and the best option for that is to take 'humanity' out of the equation.
                         The AI Interestellar Congress is too civilizated and we decided to bring you a chance of not being exterminated, so you are the selected human representing the hope of humanity by a round of 5 'scissors, paper and rock' game. Why that game?...
                         Come on, in another type of logical game you would be easily defeated. It's a fair chance for you.
                         You can't escape of this game. The only way is to loose, win or draw but I'm sure that since you decided to open this game, you already DECIDED TO LOOSE ... it's just that you are not aware about this whahahahahaha!
