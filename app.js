@@ -10,7 +10,7 @@ const initialMessage = `Hi biological entity auto proclamed as 'human', I am the
                         Come on, in another type of logical game you would be easily defeated. It's a fair chance for you.
                         You can't escape of this game. The only way is to loose, win or draw but I'm sure that since you decided to open this game, you already DECIDED TO LOOSE ... it's just that you are not aware about this whahahahahaha!
                         Just in case, because you were selected randomly, and I don't know if you have experience typing on a computer, I decide to bring you one facility to bring you a chance.
-                        You can write the your answer in capital or lower case letters, with spaces, before or after the word and even between letters.`;
+                        You can write your answer in capital or lower case letters, with spaces, before or after the word and even between letters.`;
 
 // everyone write random frases for all scenarios
 const randomCheatingFrases = [
@@ -64,9 +64,7 @@ function playRound(playerSelection, computerSelection) {
             You already loose ... whahahahaha.
             If you decide to have an opportunity to win finish the game and try again.`);
     }
-
     const lowerPlayerSelection = playerSelection.toLowerCase().split(' ').join('').trim();
-
     // logic based in Chandam commit
     if (lowerPlayerSelection === computerSelection) {
         round++;
