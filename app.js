@@ -101,7 +101,7 @@ function checkFinalScore() {
 // here is where the game start
 function welcomeMessage() {
     alert(initialMessage);
-    console.log(game());
+    game();
 }
 welcomeMessage();
 
@@ -109,7 +109,7 @@ function game() {
     for (let i = 0; i < loopVar; i++) {
         const computerSelection = computerPlay();
         const playerSelection = prompt('Scissors, paper or rock?');
-        console.log(playRound(playerSelection, computerSelection));
+        playRound(playerSelection, computerSelection);
     }
     checkFinalScore();
 }
