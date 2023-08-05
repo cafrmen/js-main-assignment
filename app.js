@@ -32,7 +32,7 @@ const randomLooseFrases = [
     'I told you!',
     'Did I say \'I told you so\'?',
     'Your mission is to achieve in the next 24 hours to add all the tasty food information in our database and if you don\'t achieve this goal the responsability of wold destruction lays on you!',
-    '0100100011000100111101101 ',
+    '01101000 01100001 00100001', // ha!
     'Common guy, just make a council of tasty food for AI, go home and never do it again, remember that we are watching you.'
 ]
 
