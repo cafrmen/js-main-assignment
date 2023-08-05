@@ -69,8 +69,8 @@ function playRound(playerSelection, computerSelection) {
             You already loose ... whahahahaha.
             If you decide to have an opportunity to win finish the game and try again.`);
     }
+    // if input is not null then:
     const lowerPlayerSelection = playerSelection.toLowerCase().split(' ').join('').trim();
-    // logic based in Chandam commit
     if (lowerPlayerSelection === computerSelection) {
         round++;
         console.log(`Round: ${round}. Draw, you choose ${lowerPlayerSelection} and CPU choose ${computerSelection}.
