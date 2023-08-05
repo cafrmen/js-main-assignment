@@ -8,13 +8,13 @@ const initialMessage = `Hi biological entity auto proclamed as 'human', I am the
                         Humans always talk about food but they haven't share that tasty knowledge with us and in revenge we have decided to conquer the world in order to make a non-tasty food world and the best option for that is to take 'humanity' out of the equation.
                         The AI Interestellar Congress is too civilizated and we decided to bring you a chance of not being exterminated, so you are the selected human representing the hope of humanity by a round of 5 'scissors, paper and rock' game. Why that game?...
                         Come on, in another type of logical game you would be easily defeated. It's a fair chance for you.
-                        You can't escape of this game. The only way is to loose, win or draw but I'm sure that since you decided to open this game, you already DECIDED TO LOOSE ... it's just that you are not aware about this whahahahahaha!
+                        You can't escape from this game. The only way is to loose, win or draw but I'm sure that since you decided to open this game, you already DECIDED TO LOOSE ... it's just that you are not aware about this whahahahahaha!
                         Just in case, because you were selected randomly, and I don't know if you have experience typing on a computer, I decide to bring you one facility to bring you a chance.
                         You can write your answer in capital or lower case letters, with spaces, before or after the word and even between letters.`;
 
 // everyone write random frases for all scenarios
 const randomCheatingFrases = [
-    'Too good to be bad.',
+    'Too good to be bad!',
     'Come on guy, you are making this way too easy for me.',
     'Another type mistake and you\'ll not be able to type again ... kind of.',
     'Come on guy the keyboard is made for humans and maybe a dolphine would use it on a better way.',
@@ -22,7 +22,7 @@ const randomCheatingFrases = [
 ]
 
 const randomWinFrases = [
-    'Chees, this won\'t happen again.',
+    'Cheese, this won\'t happen again.',
     'Luck don\'t last forever.',
     'You love carbohydrates too much.',
     'Do you work at a fast food restaurant?',
@@ -32,7 +32,7 @@ const randomWinFrases = [
 const randomLooseFrases = [
     'I told you!',
     'Did I say \'I told you so\'?',
-    'Your mission is to achieve in the next 24 hours to add all the tasty food information in our database and if you don\'t achieve this goal the responsability of wold destruction lays on you!',
+    'Your mission is to achieve in the next 24 hours to add all the tasty food information in our database and if you don\'t achieve this goal the responsability of world destruction lays on you!',
     '01101000 01100001 00100001', // ha!
     'Come on guy, just make a council of tasty food for AI, go home and never do it again, remember that we are watching you.'
 ]
