@@ -68,19 +68,19 @@ function playRound(playerSelection, computerSelection) {
     // logic based in Chandam commit
     if (lowerPlayerSelection === computerSelection) {
         round++;
-        alert(`Round: ${round}. Draw, you choose ${lowerPlayerSelection} and CPU choose ${computerSelection}. Score: You ${playerWins}, CPU ${cpuWins}`);
+        console.log(`Round: ${round}. Draw, you choose ${lowerPlayerSelection} and CPU choose ${computerSelection}. Score: You ${playerWins}, CPU ${cpuWins}`);
     } else if (lowerPlayerSelection === 'rock' && computerSelection === 'paper' ||
                 lowerPlayerSelection === 'paper' && computerSelection === 'scissors' ||
                 lowerPlayerSelection === 'scissors' && computerSelection === 'rock') {
         round++;
         cpuWins++;
-        alert(`Round: ${round}. You lose! ${computerSelection} beats ${lowerPlayerSelection}. Score: You ${playerWins}, CPU ${cpuWins}`);
+        console.log(`Round: ${round}. You lose! ${computerSelection} beats ${lowerPlayerSelection}. Score: You ${playerWins}, CPU ${cpuWins}`);
     } else if (lowerPlayerSelection === 'rock' && computerSelection === 'scissors' ||
                 lowerPlayerSelection === 'paper' && computerSelection === 'rock' ||
                 lowerPlayerSelection === 'scissors' && computerSelection === 'paper') {
         round++;
         playerWins++;
-        alert(`Round: ${round}. You won! ${lowerPlayerSelection} beats ${computerSelection}. Score: You ${playerWins}, CPU ${cpuWins}`);
+        console.log(`Round: ${round}. You won! ${lowerPlayerSelection} beats ${computerSelection}. Score: You ${playerWins}, CPU ${cpuWins}`);
     } else {
         alert (randomCheatingFrases[Math.floor(Math.random() * 5)]);
         loopVar++;
