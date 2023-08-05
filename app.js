@@ -1,62 +1,39 @@
-
-// this function make the random cpu answer of rock, paper or scissors
+const answerOption = ['Rock', 'Paper', 'Scissors'];
 const cpuAnswerEntry = [];
 const humanAnswerEntry = [];
-const answerOption = ['Rock', 'Paper', 'Scissors'];
+
 function computerPlay() {
-    let cpuAnswer = Math.floor(Math.random() * 3);
-    return cpuAnswer;
+  return Math.floor(Math.random() * 3);
 }
+
 function humanAnswer() {
-    let i = 0;
-    let ans;
-    while (i < 1) {
-        if (i == 0) {
-            ans = parseInt(prompt('Enter 0 for  "Rock" & Enter 1 for "Paper" & Enter 2 for "Scissors"', 0));
-        }
-        if (ans <= 2 && ans >= 0) {
-            i++;
-        }
-    }
-    return ans;
+  let ans;
+  do {
+    ans = parseInt(prompt('Enter 0 for "Rock", 1 for "Paper", or 2 for "Scissors"', 0));
+  } while (isNaN(ans) || ans < 0 || ans > 2);
+
+  return ans;
+}
+
+function getWinner(human, cpu) {
+  if (human === cpu) {
+    return 'tie';
+  } else if ((human + 1) % 3 === cpu) {
+    return 'You Win';
+  } else {
+    return 'You Lost To Computer';
+  }
 }
 
 for (let j = 0; j < 5; j++) {
-    let compAnswer = computerPlay();
-    // alert(answerOption[compAnswer]);
-    let Answe = humanAnswer();
-    // alert(answerOption[Answe]);
-    if (answerOption[Answe] == 'Scissors') {
-        if (answerOption[compAnswer] == 'Rock') {
-            alert('You choose Rock and Lost To Computer');
-        }
-        else if (answerOption[compAnswer] == 'Paper') {
-            alert('You choose Paper and You Win');
-        } else {
-            alert('You choose Scissors and tie');
-        }
-    } else if (answerOption[Answe] == 'Rock') {
-        if (answerOption[compAnswer] == 'Paper') {
-            alert('You choose paper and you lost to computer');
-        }
-        else if (answerOption[compAnswer] == 'Scissors') {
-            alert('You Win');
-        } else {
-            alert('You choose Rock and tie');
-        }
-    } else if (answerOption[Answe] == 'Paper') {
-        if (answerOption[compAnswer] == 'Scissors') {
-            alert('You Lost To Computer');
-        }
-        else if (answerOption[compAnswer] == 'Rock') {
-            alert('You Win');
-        } else {
-            alert('You choose Paper and tie');
-        }
-    }
-    cpuAnswerEntry.push(answerOption[compAnswer]);
-    humanAnswerEntry.push(answerOption[Answe])
-}
+  const compAnswer = computerPlay();
+  const humanAns = humanAnswer();
+  
+  const result = getWinner(humanAns, compAnswer);
+  alert(result);
 
+  cpuAnswerEntry.push(answerOption[compAnswer]);
+  humanAnswerEntry.push(answerOption[humanAns]);
+}
 
 console.log(humanAnswerEntry);
