@@ -52,6 +52,11 @@ function computerPlay() {
     return (randomAnswer[cpuAnswer]);
 }
 
+// the user prompt input
+function userPrompt() {
+    return prompt('Scissors, paper or rock?');
+}
+
 // the function that analize all scenarios
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === null) {
@@ -68,19 +73,22 @@ function playRound(playerSelection, computerSelection) {
     // logic based in Chandam commit
     if (lowerPlayerSelection === computerSelection) {
         round++;
-        console.log(`Round: ${round}. Draw, you choose ${lowerPlayerSelection} and CPU choose ${computerSelection}. Score: You ${playerWins}, CPU ${cpuWins}`);
+        console.log(`Round: ${round}. Draw, you choose ${lowerPlayerSelection} and CPU choose ${computerSelection}.
+                    Score: You ${playerWins}, CPU ${cpuWins}`);
     } else if (lowerPlayerSelection === 'rock' && computerSelection === 'paper' ||
                 lowerPlayerSelection === 'paper' && computerSelection === 'scissors' ||
                 lowerPlayerSelection === 'scissors' && computerSelection === 'rock') {
         round++;
         cpuWins++;
-        console.log(`Round: ${round}. You lose! ${computerSelection} beats ${lowerPlayerSelection}. Score: You ${playerWins}, CPU ${cpuWins}`);
+        console.log(`Round: ${round}. You lose! ${computerSelection} beats ${lowerPlayerSelection}.
+                    Score: You ${playerWins}, CPU ${cpuWins}`);
     } else if (lowerPlayerSelection === 'rock' && computerSelection === 'scissors' ||
                 lowerPlayerSelection === 'paper' && computerSelection === 'rock' ||
                 lowerPlayerSelection === 'scissors' && computerSelection === 'paper') {
         round++;
         playerWins++;
-        console.log(`Round: ${round}. You won! ${lowerPlayerSelection} beats ${computerSelection}. Score: You ${playerWins}, CPU ${cpuWins}`);
+        console.log(`Round: ${round}. You won! ${lowerPlayerSelection} beats ${computerSelection}.
+                    Score: You ${playerWins}, CPU ${cpuWins}`);
     } else {
         alert (randomCheatingFrases[Math.floor(Math.random() * 5)]);
         loopVar++;
@@ -90,12 +98,27 @@ function playRound(playerSelection, computerSelection) {
 // check for the final results
 function checkFinalScore() {
     if (playerWins < cpuWins) {
-        alert(`You lose! ${randomLooseFrases[Math.floor(Math.random() * 5)]} ... Final Score: You ${playerWins}, CPU ${cpuWins}. This game was coded by Urbashi, Anas, Chandam and Carmen and stolen by the AI Interstellar Congress.`);
+        alert(`You lose! ${randomLooseFrases[Math.floor(Math.random() * 5)]} ...
+                Final Score: You ${playerWins}, CPU ${cpuWins}.
+                This game was coded by Urbashi, Anas, Chandam and Carmen and stolen by the AI Interstellar Congress.`);
     } else if (playerWins > cpuWins) {
-        alert(`You win! ${randomWinFrases[Math.floor(Math.random() * 5)]} ... Final Score: You ${playerWins}, CPU ${cpuWins}. This game was coded by Urbashi, Anas, Chandam and Carmen and stolen by the AI Interstellar Congress.`);
+        alert(`You win! ${randomWinFrases[Math.floor(Math.random() * 5)]} ...
+                Final Score: You ${playerWins}, CPU ${cpuWins}.
+                This game was coded by Urbashi, Anas, Chandam and Carmen and stolen by the AI Interstellar Congress.`);
     } else {
-        alert(`It\'s a draw! ${randomDrawFrases[Math.floor(Math.random() * 5)]} :| ... Final Score: You ${playerWins}, CPU ${cpuWins}. Try again?. This game was coded by Urbashi, Anas, Chandam and Carmen and stolen by the AI Interstellar Congress.`);
+        alert(`It\'s a draw! ${randomDrawFrases[Math.floor(Math.random() * 5)]} :| ...
+                Final Score: You ${playerWins}, CPU ${cpuWins}. Try again?.
+                This game was coded by Urbashi, Anas, Chandam and Carmen and stolen by the AI Interstellar Congress.`);
     }
+}
+
+function game() {
+    for (let i = 0; i < loopVar; i++) {
+        const computerSelection = computerPlay();
+        const playerSelection = userPrompt();
+        playRound(playerSelection, computerSelection);
+    }
+    checkFinalScore();
 }
 
 // here is where the game start
@@ -104,12 +127,3 @@ function welcomeMessage() {
     game();
 }
 welcomeMessage();
-
-function game() {
-    for (let i = 0; i < loopVar; i++) {
-        const computerSelection = computerPlay();
-        const playerSelection = prompt('Scissors, paper or rock?');
-        playRound(playerSelection, computerSelection);
-    }
-    checkFinalScore();
-}
