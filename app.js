@@ -14,7 +14,7 @@ function humanAnswer() {
         if (i == 0) {
             ans = parseInt(prompt('Enter 0 for  "Rock" & Enter 1 for "Paper" & Enter 2 for "Scissors"', 0));
         }
-        if (ans <= 3 && ans >= 0) {
+        if (ans <= 2 && ans >= 0) {
             i++;
         }
     }
