@@ -108,7 +108,7 @@ function checkFinalScore() {
     } else {
         alert(`It\'s a draw! ${randomDrawFrases[Math.floor(Math.random() * 5)]} :| ...
                 Final Score: You ${playerWins}, CPU ${cpuWins}. Try again?.
-                This game was coded by Urbashi, Anas, Chandam and Carmen and stolen by the AI Interstellar Congress.`);
+                This game was coded by Urbashi, Anas, Chandan and Carmen and stolen by the AI Interstellar Congress.`);
     }
 }
 
